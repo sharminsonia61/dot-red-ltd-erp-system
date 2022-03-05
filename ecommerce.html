@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ecommerce Order Page</title>
+   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="container-fluid">
+  <div style="margin-top:20px;">
+    <a href=""><img src="assets/img/logo.png" width="75px" align="right"></a>
+<h1 class="h1" style="margin-bottom:26px; ">Ecommerce Order Page</h1>
+
+
+
+</div>
+<div style="display: flex; justify-content: space-between; margin-bottom:35px;" >
+  <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px;
+          "
+        >
+          <div class="dropdown show">
+            <a
+              href=""
+              class="box-btn"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              ><i class="fas fa-bars"></i
+            ></a>
+
+            <div class="dropdown-content">
+              <a class="dropdown-item" href="index.html">Dashboard</a>
+              <a class="dropdown-item" href="inward.html">Inward Page</a>
+            </div>
+          </div>
+          <a href="" class="box-btn new">API Status </a>
+        </div>
+  <div>
+  <a href="" class="box-btn ">Ecom </a>
+  <a href="" class="box-btn "><i class="fas fa-car"></i> courier </a>
+  <a href="" class="box-btn ">wms </a>
+  <a href="" class="box-btn "><i class="fas fa-chart-line"></i> finance </a>
+  </div>
+  <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
+  <div >
+  <a href="" class="box-btn   "><i class="fas fa-sign-out-alt"></i> logout </a>
+  </div>
+</div>
+  <div class="border"style="margin-bottom:16px;">
+<p >List of Website Orders</p>
+</div>
+
+
+<!-- form -->
+
+<form class="form-element" method="post" action="action.php" enctype="multipart/form-data">
+<div class="element-flex">
+  <label for="startDate"> Start Date: </label>
+  <input type="date" name="startDate" placeholder="dd-mm-yyyy">
+</div>
+<div class="element-flex">
+  <label for="endDate"> End Date: </label>
+  <input type="date" name="endDate" placeholder="dd-mm-yyyy">
+</div>
+<div class="multi_select_box element-flex col-3" >
+  <label for="location"> Select a Location: </label>
+<select class="mul-select" multiple="true" name="location" >
+  <option>www.qwer.com</option>
+  <option >www.qsdf.com</option>
+  <option >www.zxcf.com</option>
+  <option >www.aser.com</option>
+  <option >www.gfds.com</option>
+  <option >www.jher.com</option>
+  <option >www.okli.com</option>
+  <option >www.qwer.com</option>
+  <option >www.qsdf.com</option>
+  <option >www.zxcf.com</option>
+  <option >www.aser.com</option>
+  <option >www.gfds.com</option>
+  <option >www.jher.com</option>
+  <option >www.okli.com</option>
+</select>
+</div>
+
+  <div class="multi_select_box element-flex col-2" >
+    <label for="order"> Select Order Type: </label>
+  <select class="mul-select1" multiple="true" name="order" >
+  <option>Website Order </option>
+  <option> Chat Order</option>
+  <option> Font Page order</option>
+  <option> Online Order</option>
+  <option>Order</option>
+  <option>Order</option>
+</select>
+</div>
+
+<!-- <input type="submit" name="btnSubmit" value="SUBMIT  "> -->
+<button class="btn btn-primary submit" type="submit" name="btnSubmit">SUBMIT</button>
+</form>
+
+<!-- section area -->
+<section class="content">
+  <div class="container-fluid">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <div class="col-md-2">
+        <!-- small box -->
+        <div class="card text-white color1 color  mb-3" >
+  <div class="card-header">No. Of Total Orders</div>
+  <div class="card-body text-start">
+    <i class="fas fa-dolly"></i>
+    <h6 class="text-end" style="margin-top: -22px;"><span class="counter">876</span></h6>
+
+
+  </div>
+</div>
+      </div>
+      <!-- ./col -->
+      <div class="col-md-2">
+        <!-- small box -->
+        <div class="card text-white color2 color mb-3">
+  <div class="card-header">Value of All Orders</div>
+  <div class="card-body text-start">
+    <i class="fas fa-dolly"></i>
+<h6 class="text-end" style="margin-top: -22px;"><span class="counter">435</span></h6>
+  </div>
+</div>
+      </div>
+      <div class="col-md-2">
+        <!-- small box -->
+        <div class="card text-white color3 color mb-3">
+  <div class="card-header">Avg. Ticket Value</div>
+  <div class="card-body text-start ">
+    <i class="fas fa-dolly"></i>
+  <h6 class="text-end" style="margin-top: -22px;"><span class="counter">6789</span></h6>
+
+  </div>
+</div>
+      </div>
+      <!-- ./col -->
+    </div>
+</div>
+</section>
+
+<!-- table -->
+<div class=""style="margin-top:16px;">
+
+
+<table>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand box-btn" href="assets/download/down1.xlsx"><i class="fas fa-file-excel"></i> Export to Excell</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      </ul>
+      <span class=" navbar-text"><form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+
+      </form>
+      </span>
+
+
+    </div>
+  </div>
+</nav>
+  <tr>
+    <th>Order number</i></th>
+    <th>Customer name</th>
+    <th>Customer address</th>
+    <th>Contact No.</th>
+    <th>Attempts</th>
+    <th>Qu...</th>
+    <th>Order Value...</th>
+    <th>Collect Amount</th>
+    <th>Due Amount</th>
+    <th>Status</th>
+    <th>Remarks</th>
+    <th>Inward Status</th>
+
+  </tr>
+  <tr>
+    <td>0002345</td>
+    <td>Customer</td>
+    <td>building 45 zone 56 st 5678</td>
+    <td>4058694</td>
+    <td>0</td>
+    <td>1</td>
+    <td>44.00</td>
+    <td>0.00</td>
+    <td>44.00</td>
+    <td>Out for Delivery</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0002345</td>
+    <td>Customer</td>
+    <td>building 45 zone 56 st 5678</td>
+    <td>4058694</td>
+    <td>0</td>
+    <td>1</td>
+    <td>44.00</td>
+    <td>0.00</td>
+    <td>44.00</td>
+    <td>Out for Delivery</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0002345</td>
+    <td>Customer</td>
+    <td>building 45 zone 56 st 5678</td>
+    <td>4058694</td>
+    <td>0</td>
+    <td>1</td>
+    <td>44.00</td>
+    <td>0.00</td>
+    <td>44.00</td>
+    <td>Out for Delivery</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0002345</td>
+    <td>Customer</td>
+    <td>building 45 zone 56 st 5678</td>
+    <td>4058694</td>
+    <td>0</td>
+    <td>1</td>
+    <td>44.00</td>
+    <td>0.00</td>
+    <td>44.00</td>
+    <td>Out for Delivery</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0002345</td>
+    <td>Customer</td>
+    <td>building 45 zone 56 st 5678</td>
+    <td>4058694</td>
+    <td>0</td>
+    <td>3</td>
+    <td>144.00</td>
+    <td>0.00</td>
+    <td>144.00</td>
+    <td>Out for Delivery</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0002345</td>
+    <td>Customer</td>
+    <td>building 45 zone 56 st 5678</td>
+    <td>4058694</td>
+    <td>0</td>
+    <td>1</td>
+    <td>44.00</td>
+    <td>0.00</td>
+    <td>44.00</td>
+    <td>Out for Delivery</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0002345</td>
+    <td>Customer</td>
+    <td>building 67 zone 96 st 6789</td>
+    <td>40588994</td>
+    <td>0</td>
+    <td>1</td>
+    <td>40.00</td>
+    <td>0.00</td>
+    <td>40.00</td>
+    <td>Out for Delivery</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+</table>
+<div class="nav-page">
+  <nav  class="nav-el"aria-label="...">
+    <ul class="pagination bg-light">
+      <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+
+  </div>
+    </ul>
+    <h6 class="text-end">1-20 of 827 items </h6>
+
+  </nav>
+</div>
+</div>
+<br>
+<br>
+</div>
+
+
+
+
+
+
+<script src="assets/js/jquery.3.4.1.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

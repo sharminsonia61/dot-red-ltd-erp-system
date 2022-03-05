@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inward page</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div style="margin-top: 20px">
+        <a href=""
+          ><img src="assets/img/logo.png" width="75px" align="right"
+        /></a>
+        <h1 class="h1" style="margin-bottom: 26px">Inward Page</h1>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 35px;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px;
+          "
+        >
+          <div class="dropdown show">
+            <a
+              href=""
+              class="box-btn"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              ><i class="fas fa-bars"></i
+            ></a>
+
+            <div class="dropdown-content">
+              <a class="dropdown-item" href="index.html">Dashboard</a>
+              <a class="dropdown-item" href="ecommerce.html">E-commerce</a>
+            </div>
+          </div>
+          <a href="" class="box-btn new">API Status </a>
+        </div>
+        <div>
+          <a href="" class="box-btn">Ecom </a>
+          <a href="" class="box-btn"><i class="fas fa-car"></i> courier </a>
+          <a href="" class="box-btn">wms </a>
+          <a href="" class="box-btn"
+            ><i class="fas fa-chart-line"></i> finance
+          </a>
+        </div>
+        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
+        <div>
+          <a href="" class="box-btn"
+            ><i class="fas fa-sign-out-alt"></i> logout
+          </a>
+        </div>
+      </div>
+      <div class="border">
+        <p>Record Inward Orders</p>
+      </div>
+      <h6 class="pt" style="font-weight: 700">Scan/Enter Run Sheet Number</h6>
+      <div class="col-md-4">
+        <input
+          class="form-control me-2 box"
+          style="margin-bottom: 16px"
+          type="search"
+          placeholder="RS-00000052"
+          aria-label="Search"
+        />
+        <button
+          class="border1 col-12"
+          onclick="handleRunsheetDetails()"
+          style="margin-bottom: 16px"
+        >
+          Scan
+        </button>
+      </div>
+      <div class="border2" style="margin-bottom: 16px">
+        <p>Run Sheet Details</p>
+      </div>
+      <div class="featured">
+        <div class="small-container">
+          <div class="row">
+            <div class="col-6">
+              <p>
+                <span class="sheet-bold">Run Sheet Number:</span> RS-000000002
+              </p>
+              <p><span class="sheet-bold">Driver Name:</span> Mahfuz</p>
+              <p>
+                <span class="sheet-bold">Number of Orders:</span> 7 Order(s)
+              </p>
+              <p><span class="sheet-bold">Total Amount:</span> 456</p>
+              <p><span class="sheet-bold">Out of Delivery Orders:</span> 7</p>
+              <p>
+                <span class="sheet-bold">Undelivered Ordereds Amount:</span> 597
+              </p>
+              <p><span class="sheet-bold">Delivered Orders:</span> 0</p>
+            </div>
+            <!-- <div class="col-3 col align-self-end">
+
+  </div> -->
+            <div class="col-6">
+              <p><span class="sheet-bold">Run Sheet Date:</span> 31-jun-2021</p>
+              <p><span class="sheet-bold">Location:</span> Dhaka</p>
+              <p>
+                <span class="sheet-bold">Sheet Status:</span> Out of Delivery
+              </p>
+              <p><span class="sheet-bold">Collected Amount:</span> 0</p>
+              <p><span class="sheet-bold">Due Amount:</span> 0</p>
+              <p><span class="sheet-bold">Undelivered Orders:</span> 0</p>
+            </div>
+            <!-- <div class="col-3 col align-self-end ">
+
+  </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="border2" style="margin-bottom: 16px">
+        <p>Order lists</p>
+      </div>
+      <h6 class="pt" style="font-weight: 700">Scan Undelivered Orders</h6>
+      <div class="col-md-4">
+        <input
+          class="form-control me-2 box"
+          style="margin-bottom: 16px"
+          type="search"
+          placeholder="Scan Undelivered Orders"
+          aria-label="Search"
+        />
+        <button
+          class="border3 col-12"
+          onclick="handleOrderList()"
+          style="margin-bottom: 16px; height: 35px"
+        >
+          Scan
+        </button>
+      </div>
+
+      <!-- table -->
+      <div class="order">
+        <table>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand box-btn" href="assets/download/down1.xlsx"
+                ><i class="fas fa-download"></i> Download Collection Report</a
+              >
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a
+                      class="navbar-brand nav-link active box-btn"
+                      aria-current="page"
+                      href="assets/download/down1.xlsx"
+                      ><i class="fas fa-download"></i> Download Runsheet</a
+                    >
+                  </li>
+                </ul>
+                <span class="navbar-text"
+                  ><form class="d-flex">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search..."
+                      aria-label="Search"
+                    />
+                  </form>
+                </span>
+              </div>
+            </div>
+          </nav>
+          <tr>
+            <th>Order number</th>
+            <th>Customer name</th>
+            <th>Customer address</th>
+            <th>Contact No.</th>
+            <th>Attempts</th>
+            <th>Qu...</th>
+            <th>Order Value...</th>
+            <th>Collect Amount</th>
+            <th>Due Amount</th>
+            <th>Status</th>
+            <th>Remarks</th>
+            <th>Inward Status</th>
+          </tr>
+          <tr>
+            <td>0002345</td>
+            <td>Customer</td>
+            <td>building 45 zone 56 st 5678</td>
+            <td>4058694</td>
+            <td>0</td>
+            <td>1</td>
+            <td>44.00</td>
+            <td>0.00</td>
+            <td>44.00</td>
+            <td>Out for Delivery</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0002345</td>
+            <td>Customer</td>
+            <td>building 45 zone 56 st 5678</td>
+            <td>4058694</td>
+            <td>0</td>
+            <td>1</td>
+            <td>44.00</td>
+            <td>0.00</td>
+            <td>44.00</td>
+            <td>Out for Delivery</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0002345</td>
+            <td>Customer</td>
+            <td>building 45 zone 56 st 5678</td>
+            <td>4058694</td>
+            <td>0</td>
+            <td>1</td>
+            <td>44.00</td>
+            <td>0.00</td>
+            <td>44.00</td>
+            <td>Out for Delivery</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0002345</td>
+            <td>Customer</td>
+            <td>building 45 zone 56 st 5678</td>
+            <td>4058694</td>
+            <td>0</td>
+            <td>1</td>
+            <td>44.00</td>
+            <td>0.00</td>
+            <td>44.00</td>
+            <td>Out for Delivery</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0002345</td>
+            <td>Customer</td>
+            <td>building 45 zone 56 st 5678</td>
+            <td>4058694</td>
+            <td>0</td>
+            <td>3</td>
+            <td>144.00</td>
+            <td>0.00</td>
+            <td>144.00</td>
+            <td>Out for Delivery</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0002345</td>
+            <td>Customer</td>
+            <td>building 45 zone 56 st 5678</td>
+            <td>4058694</td>
+            <td>0</td>
+            <td>1</td>
+            <td>44.00</td>
+            <td>0.00</td>
+            <td>44.00</td>
+            <td>Out for Delivery</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0002345</td>
+            <td>Customer</td>
+            <td>building 67 zone 96 st 6789</td>
+            <td>40588994</td>
+            <td>0</td>
+            <td>1</td>
+            <td>40.00</td>
+            <td>0.00</td>
+            <td>40.00</td>
+            <td>Out for Delivery</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <div class="btn-btn-primary">
+        <a href="assets/download/down1.xlsx" class="box-btn new1"
+          ><i class="fas fa-download"></i>Save</a
+        >
+      </div>
+      <br />
+    </div>
+
+    <script src="assets/js/jquery.3.4.1.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/inward.js"></script>
+  </body>
+</html>
